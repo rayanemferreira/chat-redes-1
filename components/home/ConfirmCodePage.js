@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
   import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert, ActivityIndicator } from 'react-native';
 import axios from 'axios';
+import { useNavigation } from '@react-navigation/native'; // Importação para navegação
 
 const ConfirmCodePage = ( { route } ) => {
   const { userEmail, userPassword, userId } = route.params;
 
   const [code, setCode] = useState('');
   const [loading, setLoading] = useState(false);
+  const navigation = useNavigation(); // Inicializando a navegação
 
   const handleVerifyCode = async () => {
     if (!code) {
@@ -17,10 +19,12 @@ const ConfirmCodePage = ( { route } ) => {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:3000/verificar-codigo', { email:userEmail, code });
+      const response = await axios.post('http://localhost:3001/verificar-codigo', { email:userEmail, code });
       
-      Alert.alert('Sucesso', response.data.message || 'Código verificado com sucesso!');
-      navigation.replace('Home', { userEmail: userEmail, userId: userId});
+      if(response.status===200){
+         navigation.replace('Home', { userEmail: userEmail, userId: userId});
+ 
+      }
     } catch (error) {
       Alert.alert('Erro', error.response?.data?.message || 'Ocorreu um erro ao verificar o código.');
     } finally {

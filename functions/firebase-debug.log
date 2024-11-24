@@ -1,0 +1,38 @@
+[debug] [2024-11-18T01:49:11.771Z] ----------------------------------------------------------------------
+[debug] [2024-11-18T01:49:11.773Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2024-11-18T01:49:11.774Z] CLI Version:   13.25.0
+[debug] [2024-11-18T01:49:11.775Z] Platform:      win32
+[debug] [2024-11-18T01:49:11.775Z] Node Version:  v18.17.1
+[debug] [2024-11-18T01:49:11.775Z] Time:          Sun Nov 17 2024 21:49:11 GMT-0400 (GMT-04:00)
+[debug] [2024-11-18T01:49:11.776Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-18T01:49:11.860Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-18T01:49:11.860Z] > authorizing via signed-in user (kaua.salesviana@gmail.com)
+[debug] [2024-11-18T01:49:11.860Z] [iam] checking project chat-app-kaua for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2024-11-18T01:49:11.861Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:49:11.861Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:49:11.863Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-app-kaua:testIamPermissions [none]
+[debug] [2024-11-18T01:49:11.863Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-app-kaua:testIamPermissions x-goog-quota-user=projects/chat-app-kaua
+[debug] [2024-11-18T01:49:11.863Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-app-kaua:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-11-18T01:49:32.930Z] *** [apiv2] error from fetch(https://cloudresourcemanager.googleapis.com/v1/projects/chat-app-kaua:testIamPermissions, {"headers":{},"method":"POST","body":"{\"permissions\":[\"cloudfunctions.functions.create\",\"cloudfunctions.functions.delete\",\"cloudfunctions.functions.get\",\"cloudfunctions.functions.list\",\"cloudfunctions.functions.update\",\"cloudfunctions.operations.get\",\"firebase.projects.get\"]}"}): FetchError: request to https://cloudresourcemanager.googleapis.com/v1/projects/chat-app-kaua:testIamPermissions failed, reason: connect ETIMEDOUT 142.251.132.10:443
+[debug] [2024-11-18T01:49:32.931Z] [iam] error while checking permissions, command may fail: FirebaseError: Failed to make request to https://cloudresourcemanager.googleapis.com/v1/projects/chat-app-kaua:testIamPermissions
+[debug] [2024-11-18T01:49:32.931Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:49:32.931Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:49:32.931Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/chat-app-kaua/serviceAccounts/chat-app-kaua@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2024-11-18T01:49:32.931Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/chat-app-kaua/serviceAccounts/chat-app-kaua@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-11-18T01:49:44.012Z] *** [apiv2] error from fetch(https://iam.googleapis.com/v1/projects/chat-app-kaua/serviceAccounts/chat-app-kaua@appspot.gserviceaccount.com:testIamPermissions, {"headers":{},"method":"POST","body":"{\"permissions\":[\"iam.serviceAccounts.actAs\"]}"}): FetchError: request to https://iam.googleapis.com/v1/projects/chat-app-kaua/serviceAccounts/chat-app-kaua@appspot.gserviceaccount.com:testIamPermissions failed, reason: getaddrinfo ENOTFOUND iam.googleapis.com
+[debug] [2024-11-18T01:49:44.012Z] [functions] service account IAM check errored, deploy may fail: Failed to make request to https://iam.googleapis.com/v1/projects/chat-app-kaua/serviceAccounts/chat-app-kaua@appspot.gserviceaccount.com:testIamPermissions {"name":"FirebaseError","children":[],"exit":1,"message":"Failed to make request to https://iam.googleapis.com/v1/projects/chat-app-kaua/serviceAccounts/chat-app-kaua@appspot.gserviceaccount.com:testIamPermissions","original":{"message":"request to https://iam.googleapis.com/v1/projects/chat-app-kaua/serviceAccounts/chat-app-kaua@appspot.gserviceaccount.com:testIamPermissions failed, reason: getaddrinfo ENOTFOUND iam.googleapis.com","type":"system","errno":"ENOTFOUND","code":"ENOTFOUND"},"status":500}
+[info] 
+[info] === Deploying to 'chat-app-kaua'...
+[info] 
+[info] i  deploying functions 
+[debug] [2024-11-18T01:49:44.016Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:49:44.016Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:49:44.016Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chat-app-kaua [none]
+[debug] [2024-11-18T01:49:44.021Z] *** [apiv2] error from fetch(https://firebase.googleapis.com/v1beta1/projects/chat-app-kaua, {"headers":{},"method":"GET","signal":{}}): FetchError: request to https://firebase.googleapis.com/v1beta1/projects/chat-app-kaua failed, reason: getaddrinfo ENOTFOUND firebase.googleapis.com
+[debug] [2024-11-18T01:49:44.021Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/chat-app-kaua (original: request to https://firebase.googleapis.com/v1beta1/projects/chat-app-kaua failed, reason: getaddrinfo ENOTFOUND firebase.googleapis.com)
+[debug] [2024-11-18T01:49:44.023Z] FirebaseError: Failed to make request to https://firebase.googleapis.com/v1beta1/projects/chat-app-kaua
+    at RetryOperation._fn (C:\Users\PROFNTI\AppData\Roaming\nvm\v18.17.1\node_modules\firebase-tools\lib\apiv2.js:261:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project chat-app-kaua. Please make sure the project exists and your account has permission to access it.

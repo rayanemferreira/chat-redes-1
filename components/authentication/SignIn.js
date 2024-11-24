@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, ToastAndroid, ScrollView, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native'; // Importação para navegação
 import { doc, getDoc, setDoc, updateDoc, getDocs, where, query, collection, arrayUnion } from 'firebase/firestore';
-import { auth } from '../../config/firebase'; 
+ import { auth, db } from '../../config/firebase'; 
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import * as Keychain from 'react-native-keychain';
 import styles from './SignInStyles';
@@ -34,7 +34,7 @@ const SignIn = () => {
 
             // Substitui a tela de autenticação pela tela "Home" e passa o usuário autenticado
             // navigation.replace('Home', { userEmail: user.email, userId: user.uid });
-            const response = await axios.post('http://localhost:3000/generate-code', { email });
+            const response = await axios.post('http://localhost:3001/generate-code', { email });
             console.log('response',response)
             if(response.status===200){
                 navigation.replace('ConfirmCodePage', { userEmail: user.email, userPassword: user.password });
@@ -54,9 +54,23 @@ const SignIn = () => {
     };    
 
     const getMyPublicKey = async () => {
-         
+        try {
+            // Obtenha o UID do usuário autenticado
+            const userId = auth.currentUser.uid; 
+            const userDocRef = doc(db, 'users', userId); // Referência direta ao documento do usuário
+            const userDoc = await getDoc(userDocRef); // Obtém o documento
+    
+            if (userDoc.exists()) {
+                return userDoc.data().publicKey; // Acesse a chave pública
+            } else {
+                console.log("Documento do usuário não encontrado.");
+                return null; // Retorna null se o documento não existir
+            }
+        } catch (error) {
+            console.error("Erro ao buscar minha chave pública:", error);
+            return null; // Retorna null em caso de erro
+        }
     };
-
     const getPrivateKey = async () => {
         try {
             const userId = auth.currentUser.uid; 

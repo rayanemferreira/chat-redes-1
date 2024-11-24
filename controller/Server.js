@@ -2,17 +2,11 @@ const express = require('express');
 const http = require('http');
 const socketIo = require('socket.io');
 const { collection, query, where, getDocs, doc, getDoc, updateDoc, setDoc, arrayUnion } = require('firebase/firestore'); // Importar Firestore
-const { auth, db } = require('./firebase'); // Importar configuração do Firebase
+const { auth, db } = require('../config/firebase'); // Importar configuração do Firebase
 const { Buffer } =  require('buffer');
 const { TextDecoder } = require('text-encoding');
-const cors = require('cors');
-  
+
 const app = express();
-app.use(cors({
-    origin: 'http://localhost:8081', // Substitua pela origem do seu frontend
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos permitidos
-    allowedHeaders: ['Content-Type', 'Authorization'], // Cabeçalhos permitidos
-}));
 
 const server = http.createServer(app);
 const io = socketIo(server);
@@ -20,23 +14,6 @@ const IDEA = require("idea-cipher");
 
 // Armazenar conexões dos usuários (email -> socketId)
 const userSockets = {};
-
-
- const nodemailer = require('nodemailer'); // Biblioteca para enviar e-mails
-const crypto = require('crypto'); // Biblioteca para geração de códigos aleatórios
-const router = express.Router();
-
- 
-app.use(express.json()); // Middleware para processar JSON no corpo das requisições
-
-// Configuração do Nodemailer
-const transporter = nodemailer.createTransport({
-    service: 'gmail', // Ou outro serviço de e-mail que você usa
-    auth: {
-        user: 'testchatapptestchatapp@gmail.com', // Seu e-mail
-        pass: 'test-chat-app74' // Sua senha (recomenda-se usar uma senha de aplicativo)
-    }
-});
 
 io.on('connection', (socket) => {
     // Quando um usuário se conecta, armazene seu socketId com o email
@@ -48,7 +25,7 @@ io.on('connection', (socket) => {
     });
 
     // Escuta por mensagens enviadas por um usuário
-          socket.on('sendMessage', async (data) => {
+    socket.on('sendMessage', async (data) => {
         const { message, senderKey, recipientKey, senderEmail, recipientEmail } = data;
 
         console.log(`Mensagem recebida no servidor:`, data); // Log para ver a mensagem recebida
@@ -203,92 +180,6 @@ const getGroupMembers = async (groupId, authenticatedEmail) => {
     return [];
 };
 
-// POST para gerar e enviar código de verificação
-app.post('/generate-code', async (req, res) => {
-    const { email } = req.body;
-
-    if (!email) {
-        return res.status(400).json({ message: 'E-mail é obrigatório' });
-    }
-
-    try {
-    //     // Gera um código aleatório de 6 dígitos
-        const code = crypto.randomInt(100000, 999999).toString();
-
-
-
-
-
-
-            //   getGroupMembers("is9o9zHBUHT798wJzE5z","kaua.salesviana@outlook.com");
-
-
-
-    //     // Salva o código no Firestore
-
-    //     const codeRef = doc(db, 'codes' ); // Referência ao documento na coleção 'chats'
-
-    //     if (codeRef.exists()) {
-    //         console.log('Dados:', codeSnap.data());
-    //     }
-
-    //  const newDocRef = await addDoc(codesCollectionRef, { code: '123456', email: 'user@example.com' });
-
-       
-
-    //     // Envia o e-mail com o código
-    //     const mailOptions = {
-    //         from: 'testchatapptestchatapp@gmail.com',
-    //         to: email,
-    //         subject: 'Seu código de verificação',
-    //         text: `Seu código de verificação é: ${code}`
-    //     };
-
-    //     await transporter.sendMail(mailOptions);
-
-        console.log(`Código enviado para ${email}: ${code}`);
-        res.status(200).json({ message: 'Código enviado com sucesso' });
-    } catch (error) {
-        console.error('Erro ao gerar ou enviar o código:', error);
-        res.status(500).json({ message: 'Erro ao gerar ou enviar o código' });
-    }
-});
-
-
-// Rota para verificar o código
-app.post('/verificar-codigo', async (req, res) => {
-    const { email, code } = req.body;
-
-    // Validação de entrada
-    if (!email || !code) {
-        return res.status(400).json({ message: 'Email e código são obrigatórios.' });
-    }
-
-    try {
-        // Referência ao documento na coleção "codes"
-        const codeRef = doc(db, 'codes', email);
-        const codeSnap = await getDoc(codeRef);
-
-        if (!codeSnap.exists()) {
-            return res.status(404).json({ message: 'Código não encontrado para este email.' });
-        }
-
-        const data = codeSnap.data();
-
-        // Verifica se o código fornecido corresponde ao armazenado
-        if (data.code === code) {
-            // Opcional: Remove o código após validação bem-sucedida
-            await deleteDoc(codeRef);
-
-            return res.status(200).json({ message: 'Código verificado com sucesso!' });
-        } else {
-            return res.status(400).json({ message: 'Código incorreto.' });
-        }
-    } catch (error) {
-        console.error('Erro ao verificar o código:', error);
-        return res.status(500).json({ message: 'Erro interno do servidor.' });
-    }
-});
 
 server.listen(3000, () => {
     console.log('Servidor rodando na porta 3000');

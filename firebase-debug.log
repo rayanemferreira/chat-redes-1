@@ -1,0 +1,432 @@
+[debug] [2024-11-18T01:59:15.634Z] ----------------------------------------------------------------------
+[debug] [2024-11-18T01:59:15.636Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2024-11-18T01:59:15.636Z] CLI Version:   13.25.0
+[debug] [2024-11-18T01:59:15.637Z] Platform:      win32
+[debug] [2024-11-18T01:59:15.637Z] Node Version:  v18.17.1
+[debug] [2024-11-18T01:59:15.637Z] Time:          Sun Nov 17 2024 21:59:15 GMT-0400 (GMT-04:00)
+[debug] [2024-11-18T01:59:15.637Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-18T01:59:15.698Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-18T01:59:15.699Z] > authorizing via signed-in user (kaua.salesviana@gmail.com)
+[debug] [2024-11-18T01:59:15.699Z] [iam] checking project chat-app-kaua for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2024-11-18T01:59:15.700Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:15.700Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:15.701Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-app-kaua:testIamPermissions [none]
+[debug] [2024-11-18T01:59:15.701Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-app-kaua:testIamPermissions x-goog-quota-user=projects/chat-app-kaua
+[debug] [2024-11-18T01:59:15.701Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-app-kaua:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-11-18T01:59:16.839Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-app-kaua:testIamPermissions 200
+[debug] [2024-11-18T01:59:16.839Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-app-kaua:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-11-18T01:59:16.840Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:16.840Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:16.840Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/chat-app-kaua/serviceAccounts/chat-app-kaua@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2024-11-18T01:59:16.840Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/chat-app-kaua/serviceAccounts/chat-app-kaua@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-11-18T01:59:17.992Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/chat-app-kaua/serviceAccounts/chat-app-kaua@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2024-11-18T01:59:17.992Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/chat-app-kaua/serviceAccounts/chat-app-kaua@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'chat-app-kaua'...
+[info] 
+[info] i  deploying functions 
+[debug] [2024-11-18T01:59:17.995Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:17.995Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:17.996Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chat-app-kaua [none]
+[debug] [2024-11-18T01:59:18.546Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chat-app-kaua 200
+[debug] [2024-11-18T01:59:18.546Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chat-app-kaua {"projectId":"chat-app-kaua","projectNumber":"163085396885","displayName":"Chat-App","name":"projects/chat-app-kaua","resources":{"hostingSite":"chat-app-kaua"},"state":"ACTIVE","etag":"1_f33ae554-696f-43b1-a1b3-4c23384a03fc"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: preparing codebase teste for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[debug] [2024-11-18T01:59:18.548Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:18.548Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:18.548Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:18.548Z] Checked if tokens are valid: true, expires at: 1731897935405
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2024-11-18T01:59:18.549Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:18.549Z] Checked if tokens are valid: true, expires at: 1731897935405
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2024-11-18T01:59:18.549Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:18.549Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:18.549Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-11-18T01:59:18.549Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/chat-app-kaua
+[debug] [2024-11-18T01:59:18.550Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-11-18T01:59:18.550Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/chat-app-kaua
+[debug] [2024-11-18T01:59:18.551Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/cloudbuild.googleapis.com [none]
+[debug] [2024-11-18T01:59:18.551Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/cloudbuild.googleapis.com x-goog-quota-user=projects/chat-app-kaua
+[debug] [2024-11-18T01:59:18.552Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/artifactregistry.googleapis.com [none]
+[debug] [2024-11-18T01:59:18.552Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/artifactregistry.googleapis.com x-goog-quota-user=projects/chat-app-kaua
+[debug] [2024-11-18T01:59:19.816Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/runtimeconfig.googleapis.com 200
+[debug] [2024-11-18T01:59:19.816Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-11-18T01:59:19.820Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/artifactregistry.googleapis.com 200
+[debug] [2024-11-18T01:59:19.820Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/artifactregistry.googleapis.com [omitted]
+[warn] !  artifactregistry: missing required API artifactregistry.googleapis.com. Enabling now... 
+[debug] [2024-11-18T01:59:19.821Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:19.821Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:19.821Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/artifactregistry.googleapis.com:enable [none]
+[debug] [2024-11-18T01:59:19.821Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/artifactregistry.googleapis.com:enable x-goog-quota-user=projects/chat-app-kaua
+[debug] [2024-11-18T01:59:19.824Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/cloudbuild.googleapis.com 200
+[debug] [2024-11-18T01:59:19.824Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/cloudbuild.googleapis.com [omitted]
+[warn] !  functions: missing required API cloudbuild.googleapis.com. Enabling now... 
+[debug] [2024-11-18T01:59:19.824Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:19.824Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:19.825Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/cloudbuild.googleapis.com:enable [none]
+[debug] [2024-11-18T01:59:19.825Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/cloudbuild.googleapis.com:enable x-goog-quota-user=projects/chat-app-kaua
+[debug] [2024-11-18T01:59:19.840Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/cloudfunctions.googleapis.com 200
+[debug] [2024-11-18T01:59:19.841Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2024-11-18T01:59:21.272Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/artifactregistry.googleapis.com:enable 200
+[debug] [2024-11-18T01:59:21.272Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/artifactregistry.googleapis.com:enable [omitted]
+[debug] [2024-11-18T01:59:21.273Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/cloudbuild.googleapis.com:enable 200
+[debug] [2024-11-18T01:59:21.273Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/cloudbuild.googleapis.com:enable [omitted]
+[debug] [2024-11-18T01:59:31.280Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:31.281Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:31.281Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/artifactregistry.googleapis.com [none]
+[debug] [2024-11-18T01:59:31.281Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/artifactregistry.googleapis.com x-goog-quota-user=projects/chat-app-kaua
+[debug] [2024-11-18T01:59:31.283Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:31.283Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:31.283Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/cloudbuild.googleapis.com [none]
+[debug] [2024-11-18T01:59:31.283Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/cloudbuild.googleapis.com x-goog-quota-user=projects/chat-app-kaua
+[debug] [2024-11-18T01:59:32.432Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/artifactregistry.googleapis.com 200
+[debug] [2024-11-18T01:59:32.432Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2024-11-18T01:59:32.479Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/cloudbuild.googleapis.com 200
+[debug] [2024-11-18T01:59:32.479Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2024-11-18T01:59:32.480Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:32.481Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:32.481Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chat-app-kaua/adminSdkConfig [none]
+[debug] [2024-11-18T01:59:33.139Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chat-app-kaua/adminSdkConfig 200
+[debug] [2024-11-18T01:59:33.139Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chat-app-kaua/adminSdkConfig {"projectId":"chat-app-kaua","storageBucket":"chat-app-kaua.firebasestorage.app"}
+[debug] [2024-11-18T01:59:33.140Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:33.140Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:33.140Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/chat-app-kaua/configs [none]
+[debug] [2024-11-18T01:59:33.751Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/chat-app-kaua/configs 200
+[debug] [2024-11-18T01:59:33.752Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/chat-app-kaua/configs {}
+[debug] [2024-11-18T01:59:33.756Z] Validating nodejs source
+[debug] [2024-11-18T01:59:35.373Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1",
+    "nodemailer": "^6.9.16"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-11-18T01:59:35.373Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[debug] [2024-11-18T01:59:35.376Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-11-18T01:59:35.389Z] Found firebase-functions binary at 'C:\Users\PROFNTI\Documents\GitHub\chat-redes-1\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8581
+
+[debug] [2024-11-18T01:59:36.025Z] Got response from /__/functions.yaml {"endpoints":{"sendEmail":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"sendEmail"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2024-11-18T01:59:36.047Z] Validating nodejs source
+[debug] [2024-11-18T01:59:37.287Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-11-18T01:59:37.288Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase teste to determine what to deploy 
+[debug] [2024-11-18T01:59:37.289Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-11-18T01:59:37.293Z] Found firebase-functions binary at 'C:\Users\PROFNTI\Documents\GitHub\chat-redes-1\teste\node_modules\.bin\firebase-functions'
+[info] Serving at port 8464
+
+[debug] [2024-11-18T01:59:40.085Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] i  extensions: ensuring required API firebaseextensions.googleapis.com is enabled... 
+[debug] [2024-11-18T01:59:40.111Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:40.111Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:40.111Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/firebaseextensions.googleapis.com [none]
+[debug] [2024-11-18T01:59:40.111Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/firebaseextensions.googleapis.com x-goog-quota-user=projects/chat-app-kaua
+[debug] [2024-11-18T01:59:41.234Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/firebaseextensions.googleapis.com 200
+[debug] [2024-11-18T01:59:41.234Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/firebaseextensions.googleapis.com [omitted]
+[warn] !  extensions: missing required API firebaseextensions.googleapis.com. Enabling now... 
+[debug] [2024-11-18T01:59:41.235Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:41.235Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:41.235Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/firebaseextensions.googleapis.com:enable [none]
+[debug] [2024-11-18T01:59:41.235Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/firebaseextensions.googleapis.com:enable x-goog-quota-user=projects/chat-app-kaua
+[debug] [2024-11-18T01:59:42.792Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/firebaseextensions.googleapis.com:enable 200
+[debug] [2024-11-18T01:59:42.792Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/firebaseextensions.googleapis.com:enable [omitted]
+[debug] [2024-11-18T01:59:52.807Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:52.807Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:52.807Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/firebaseextensions.googleapis.com [none]
+[debug] [2024-11-18T01:59:52.807Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/firebaseextensions.googleapis.com x-goog-quota-user=projects/chat-app-kaua
+[debug] [2024-11-18T01:59:54.159Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/firebaseextensions.googleapis.com 200
+[debug] [2024-11-18T01:59:54.159Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/firebaseextensions.googleapis.com [omitted]
+[info] +  extensions: required API firebaseextensions.googleapis.com is enabled 
+[debug] [2024-11-18T01:59:54.162Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-18T01:59:54.162Z] > authorizing via signed-in user (kaua.salesviana@gmail.com)
+[debug] [2024-11-18T01:59:54.162Z] [iam] checking project chat-app-kaua for permissions ["firebase.projects.get","firebaseextensions.instances.list"]
+[debug] [2024-11-18T01:59:54.163Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:54.163Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:54.163Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-app-kaua:testIamPermissions [none]
+[debug] [2024-11-18T01:59:54.163Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-app-kaua:testIamPermissions x-goog-quota-user=projects/chat-app-kaua
+[debug] [2024-11-18T01:59:54.163Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-app-kaua:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2024-11-18T01:59:55.118Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-app-kaua:testIamPermissions 200
+[debug] [2024-11-18T01:59:55.118Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-app-kaua:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2024-11-18T01:59:55.118Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:55.118Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:55.119Z] >>> [apiv2][query] GET https://firebaseextensions.googleapis.com/v1beta/projects/chat-app-kaua/instances pageSize=100&pageToken=
+[debug] [2024-11-18T01:59:57.843Z] <<< [apiv2][status] GET https://firebaseextensions.googleapis.com/v1beta/projects/chat-app-kaua/instances 200
+[debug] [2024-11-18T01:59:57.843Z] <<< [apiv2][body] GET https://firebaseextensions.googleapis.com/v1beta/projects/chat-app-kaua/instances {}
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged C:\Users\PROFNTI\Documents\GitHub\chat-redes-1\functions (60.62 KB) for uploading 
+[debug] [2024-11-18T01:59:57.882Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:57.883Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:57.883Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/chat-app-kaua/locations/-/functions [none]
+[debug] [2024-11-18T01:59:59.230Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/chat-app-kaua/locations/-/functions 200
+[debug] [2024-11-18T01:59:59.230Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/chat-app-kaua/locations/-/functions {}
+[debug] [2024-11-18T01:59:59.230Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:59.230Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T01:59:59.230Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/chat-app-kaua/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2024-11-18T02:00:00.862Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/chat-app-kaua/locations/-/functions 200
+[debug] [2024-11-18T02:00:00.862Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/chat-app-kaua/locations/-/functions {}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[debug] [2024-11-18T02:00:00.865Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:00.865Z] Checked if tokens are valid: true, expires at: 1731897935405
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[debug] [2024-11-18T02:00:00.865Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:00.866Z] Checked if tokens are valid: true, expires at: 1731897935405
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[debug] [2024-11-18T02:00:00.866Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:00.866Z] Checked if tokens are valid: true, expires at: 1731897935405
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2024-11-18T02:00:00.866Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:00.866Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:00.866Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/run.googleapis.com [none]
+[debug] [2024-11-18T02:00:00.866Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/run.googleapis.com x-goog-quota-user=projects/chat-app-kaua
+[debug] [2024-11-18T02:00:00.868Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/eventarc.googleapis.com [none]
+[debug] [2024-11-18T02:00:00.868Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/eventarc.googleapis.com x-goog-quota-user=projects/chat-app-kaua
+[debug] [2024-11-18T02:00:00.869Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/pubsub.googleapis.com [none]
+[debug] [2024-11-18T02:00:00.869Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/pubsub.googleapis.com x-goog-quota-user=projects/chat-app-kaua
+[debug] [2024-11-18T02:00:00.870Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/storage.googleapis.com [none]
+[debug] [2024-11-18T02:00:00.870Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/storage.googleapis.com x-goog-quota-user=projects/chat-app-kaua
+[debug] [2024-11-18T02:00:01.985Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/run.googleapis.com 200
+[debug] [2024-11-18T02:00:01.985Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/run.googleapis.com [omitted]
+[warn] !  functions: missing required API run.googleapis.com. Enabling now... 
+[debug] [2024-11-18T02:00:01.985Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:01.985Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:01.985Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/run.googleapis.com:enable [none]
+[debug] [2024-11-18T02:00:01.986Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/run.googleapis.com:enable x-goog-quota-user=projects/chat-app-kaua
+[debug] [2024-11-18T02:00:01.991Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/storage.googleapis.com 200
+[debug] [2024-11-18T02:00:01.991Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/storage.googleapis.com [omitted]
+[info] +  functions: required API storage.googleapis.com is enabled 
+[debug] [2024-11-18T02:00:01.997Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/pubsub.googleapis.com 200
+[debug] [2024-11-18T02:00:01.998Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/pubsub.googleapis.com [omitted]
+[info] +  functions: required API pubsub.googleapis.com is enabled 
+[debug] [2024-11-18T02:00:02.018Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/eventarc.googleapis.com 200
+[debug] [2024-11-18T02:00:02.018Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/eventarc.googleapis.com [omitted]
+[warn] !  functions: missing required API eventarc.googleapis.com. Enabling now... 
+[debug] [2024-11-18T02:00:02.019Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:02.019Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:02.019Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/eventarc.googleapis.com:enable [none]
+[debug] [2024-11-18T02:00:02.019Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/eventarc.googleapis.com:enable x-goog-quota-user=projects/chat-app-kaua
+[debug] [2024-11-18T02:00:03.434Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/eventarc.googleapis.com:enable 200
+[debug] [2024-11-18T02:00:03.434Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/eventarc.googleapis.com:enable [omitted]
+[debug] [2024-11-18T02:00:03.621Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/run.googleapis.com:enable 200
+[debug] [2024-11-18T02:00:03.621Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/run.googleapis.com:enable [omitted]
+[debug] [2024-11-18T02:00:13.441Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:13.441Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:13.441Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/eventarc.googleapis.com [none]
+[debug] [2024-11-18T02:00:13.441Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/eventarc.googleapis.com x-goog-quota-user=projects/chat-app-kaua
+[debug] [2024-11-18T02:00:13.622Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:13.622Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:13.622Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/run.googleapis.com [none]
+[debug] [2024-11-18T02:00:13.622Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/run.googleapis.com x-goog-quota-user=projects/chat-app-kaua
+[debug] [2024-11-18T02:00:14.769Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/eventarc.googleapis.com 200
+[debug] [2024-11-18T02:00:14.769Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/eventarc.googleapis.com [omitted]
+[info] +  functions: required API eventarc.googleapis.com is enabled 
+[debug] [2024-11-18T02:00:14.804Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/run.googleapis.com 200
+[debug] [2024-11-18T02:00:14.804Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chat-app-kaua/services/run.googleapis.com [omitted]
+[info] +  functions: required API run.googleapis.com is enabled 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[debug] [2024-11-18T02:00:14.807Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:14.807Z] Checked if tokens are valid: true, expires at: 1731897935405
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2024-11-18T02:00:14.807Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:14.807Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:14.808Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/163085396885/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2024-11-18T02:00:14.809Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/163085396885/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2024-11-18T02:00:16.042Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/163085396885/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2024-11-18T02:00:16.043Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/163085396885/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-163085396885@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"112299102101929059311"}}
+[debug] [2024-11-18T02:00:16.526Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/163085396885/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2024-11-18T02:00:16.526Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/163085396885/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-163085396885@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"106981218971247175974"}}
+[debug] [2024-11-18T02:00:16.528Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:16.528Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:16.528Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chat-app-kaua [none]
+[debug] [2024-11-18T02:00:17.071Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chat-app-kaua 200
+[debug] [2024-11-18T02:00:17.071Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chat-app-kaua {"projectId":"chat-app-kaua","projectNumber":"163085396885","displayName":"Chat-App","name":"projects/chat-app-kaua","resources":{"hostingSite":"chat-app-kaua"},"state":"ACTIVE","etag":"1_f33ae554-696f-43b1-a1b3-4c23384a03fc"}
+[debug] [2024-11-18T02:00:17.072Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:17.072Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:17.072Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/chat-app-kaua/billingInfo [none]
+[debug] [2024-11-18T02:00:18.454Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/chat-app-kaua/billingInfo 200
+[debug] [2024-11-18T02:00:18.454Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/chat-app-kaua/billingInfo {"name":"projects/chat-app-kaua/billingInfo","projectId":"chat-app-kaua","billingAccountName":"billingAccounts/017A70-503E93-92EC5D","billingEnabled":true}
+[debug] [2024-11-18T02:00:18.455Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:18.455Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:18.455Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/chat-app-kaua/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2024-11-18T02:00:21.398Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/chat-app-kaua/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2024-11-18T02:00:21.398Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/chat-app-kaua/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-163085396885.us-central1.cloudfunctions.appspot.com/e531c744-78fc-4865-9152-5a4369f25e13.zip?GoogleAccessId=service-163085396885@gcf-admin-robot.iam.gserviceaccount.com&Expires=1731897021&Signature=Tm7aGdJH5BtXssn%2BFzKNeBjmTVFa73YvqHYjmvQGAtV4pFc2tkizzd9brhXTJf4sUFTsGRezpOu52u3Xw0dwGMpICVcckMM9BQe0kkKY3I8KsgRkFAveLcQyzuGb9yGSnl370vsNp1UPv0QQplFwz3EAWbE3Nr7jpLWs1SanX%2FG%2F46NZodTbjeeL7zsJgv%2Fgf59eTfZ3fFFHKRQLCAciu18%2Bpu%2FFd%2BTn7VEOuqTET8SoOHTf6eaNpY3P1sC9dbmi7uNsCc2hM9VFsNV5OK68kumErEX3%2F%2FUpPfISjIGWiTHy2PUkIBz5yFxYmvs0YsucBDs0UDeq1Cbp%2BntvvMAQPA%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-163085396885.us-central1.cloudfunctions.appspot.com","object":"e531c744-78fc-4865-9152-5a4369f25e13.zip"}}
+[debug] [2024-11-18T02:00:21.399Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-163085396885.us-central1.cloudfunctions.appspot.com/e531c744-78fc-4865-9152-5a4369f25e13.zip GoogleAccessId=service-163085396885%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1731897021&Signature=Tm7aGdJH5BtXssn%2BFzKNeBjmTVFa73YvqHYjmvQGAtV4pFc2tkizzd9brhXTJf4sUFTsGRezpOu52u3Xw0dwGMpICVcckMM9BQe0kkKY3I8KsgRkFAveLcQyzuGb9yGSnl370vsNp1UPv0QQplFwz3EAWbE3Nr7jpLWs1SanX%2FG%2F46NZodTbjeeL7zsJgv%2Fgf59eTfZ3fFFHKRQLCAciu18%2Bpu%2FFd%2BTn7VEOuqTET8SoOHTf6eaNpY3P1sC9dbmi7uNsCc2hM9VFsNV5OK68kumErEX3%2F%2FUpPfISjIGWiTHy2PUkIBz5yFxYmvs0YsucBDs0UDeq1Cbp%2BntvvMAQPA%3D%3D
+[debug] [2024-11-18T02:00:21.399Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-163085396885.us-central1.cloudfunctions.appspot.com/e531c744-78fc-4865-9152-5a4369f25e13.zip [stream]
+[debug] [2024-11-18T02:00:22.188Z] <<< [apiv2][status] PUT https://storage.googleapis.com/gcf-v2-uploads-163085396885.us-central1.cloudfunctions.appspot.com/e531c744-78fc-4865-9152-5a4369f25e13.zip 200
+[debug] [2024-11-18T02:00:22.189Z] <<< [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-163085396885.us-central1.cloudfunctions.appspot.com/e531c744-78fc-4865-9152-5a4369f25e13.zip [omitted]
+[info] +  functions: functions folder uploaded successfully 
+[info] i  functions: creating Node.js 18 (2nd Gen) function sendEmail(us-central1)... 
+[debug] [2024-11-18T02:00:22.194Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:22.194Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:22.195Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/chat-app-kaua/locations/us-central1/functions functionId=sendEmail
+[debug] [2024-11-18T02:00:22.195Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/chat-app-kaua/locations/us-central1/functions {"name":"projects/chat-app-kaua/locations/us-central1/functions/sendEmail","buildConfig":{"runtime":"nodejs18","entryPoint":"sendEmail","source":{"storageSource":{"bucket":"gcf-v2-uploads-163085396885.us-central1.cloudfunctions.appspot.com","object":"e531c744-78fc-4865-9152-5a4369f25e13.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"chat-app-kaua\",\"storageBucket\":\"chat-app-kaua.firebasestorage.app\"}","GCLOUD_PROJECT":"chat-app-kaua","EVENTARC_CLOUD_EVENT_SOURCE":"projects/chat-app-kaua/locations/us-central1/services/sendEmail","FUNCTION_TARGET":"sendEmail"},"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null},"labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"a72d1ab0ca0dd5d1e24460353a9394ff393e9a6b"}}
+[debug] [2024-11-18T02:00:24.751Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/chat-app-kaua/locations/us-central1/functions 200
+[debug] [2024-11-18T02:00:24.751Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/chat-app-kaua/locations/us-central1/functions {"name":"projects/chat-app-kaua/locations/us-central1/operations/operation-1731895223201-6272647912dc6-2af47905-a32e682b","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-18T02:00:24.503590641Z","target":"projects/chat-app-kaua/locations/us-central1/functions/sendEmail","verb":"create","cancelRequested":false,"apiVersion":"v2"},"done":false}
+[debug] [2024-11-18T02:00:24.752Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:24.752Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:24.753Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/chat-app-kaua/locations/us-central1/operations/operation-1731895223201-6272647912dc6-2af47905-a32e682b [none]
+[debug] [2024-11-18T02:00:26.036Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/chat-app-kaua/locations/us-central1/operations/operation-1731895223201-6272647912dc6-2af47905-a32e682b 200
+[debug] [2024-11-18T02:00:26.036Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/chat-app-kaua/locations/us-central1/operations/operation-1731895223201-6272647912dc6-2af47905-a32e682b {"name":"projects/chat-app-kaua/locations/us-central1/operations/operation-1731895223201-6272647912dc6-2af47905-a32e682b","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-18T02:00:24.503590641Z","target":"projects/chat-app-kaua/locations/us-central1/functions/sendEmail","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/chat-app-kaua/locations/us-central1/functions/sendEmail","buildConfig":{"runtime":"nodejs18","entryPoint":"sendEmail","source":{"storageSource":{"bucket":"gcf-v2-sources-163085396885-us-central1","object":"sendEmail/function-source.zip","generation":"1731895224235397"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/chat-app-kaua/serviceAccounts/163085396885-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/chat-app-kaua/locations/us-central1/services/sendemail","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"chat-app-kaua\",\"storageBucket\":\"chat-app-kaua.firebasestorage.app\"}","GCLOUD_PROJECT":"chat-app-kaua","EVENTARC_CLOUD_EVENT_SOURCE":"projects/chat-app-kaua/locations/us-central1/services/sendEmail","FUNCTION_TARGET":"sendEmail","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"163085396885-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"a72d1ab0ca0dd5d1e24460353a9394ff393e9a6b"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2024-11-18T02:00:26.546Z] [create-default-us-central1-sendEmail] Retrying task index 0
+[debug] [2024-11-18T02:00:26.546Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:26.546Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:26.546Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/chat-app-kaua/locations/us-central1/operations/operation-1731895223201-6272647912dc6-2af47905-a32e682b [none]
+[debug] [2024-11-18T02:00:27.712Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/chat-app-kaua/locations/us-central1/operations/operation-1731895223201-6272647912dc6-2af47905-a32e682b 200
+[debug] [2024-11-18T02:00:27.712Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/chat-app-kaua/locations/us-central1/operations/operation-1731895223201-6272647912dc6-2af47905-a32e682b {"name":"projects/chat-app-kaua/locations/us-central1/operations/operation-1731895223201-6272647912dc6-2af47905-a32e682b","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-18T02:00:24.503590641Z","target":"projects/chat-app-kaua/locations/us-central1/functions/sendEmail","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/chat-app-kaua/locations/us-central1/functions/sendEmail","buildConfig":{"runtime":"nodejs18","entryPoint":"sendEmail","source":{"storageSource":{"bucket":"gcf-v2-sources-163085396885-us-central1","object":"sendEmail/function-source.zip","generation":"1731895224235397"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/chat-app-kaua/serviceAccounts/163085396885-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/chat-app-kaua/locations/us-central1/services/sendemail","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"chat-app-kaua\",\"storageBucket\":\"chat-app-kaua.firebasestorage.app\"}","GCLOUD_PROJECT":"chat-app-kaua","EVENTARC_CLOUD_EVENT_SOURCE":"projects/chat-app-kaua/locations/us-central1/services/sendEmail","FUNCTION_TARGET":"sendEmail","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"163085396885-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"a72d1ab0ca0dd5d1e24460353a9394ff393e9a6b"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2024-11-18T02:00:28.724Z] [create-default-us-central1-sendEmail] Retrying task index 0
+[debug] [2024-11-18T02:00:28.724Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:28.724Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:28.724Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/chat-app-kaua/locations/us-central1/operations/operation-1731895223201-6272647912dc6-2af47905-a32e682b [none]
+[debug] [2024-11-18T02:00:29.892Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/chat-app-kaua/locations/us-central1/operations/operation-1731895223201-6272647912dc6-2af47905-a32e682b 200
+[debug] [2024-11-18T02:00:29.892Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/chat-app-kaua/locations/us-central1/operations/operation-1731895223201-6272647912dc6-2af47905-a32e682b {"name":"projects/chat-app-kaua/locations/us-central1/operations/operation-1731895223201-6272647912dc6-2af47905-a32e682b","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-18T02:00:24.503590641Z","target":"projects/chat-app-kaua/locations/us-central1/functions/sendEmail","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/chat-app-kaua/locations/us-central1/functions/sendEmail","buildConfig":{"runtime":"nodejs18","entryPoint":"sendEmail","source":{"storageSource":{"bucket":"gcf-v2-sources-163085396885-us-central1","object":"sendEmail/function-source.zip","generation":"1731895224235397"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/chat-app-kaua/serviceAccounts/163085396885-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/chat-app-kaua/locations/us-central1/services/sendemail","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"chat-app-kaua\",\"storageBucket\":\"chat-app-kaua.firebasestorage.app\"}","GCLOUD_PROJECT":"chat-app-kaua","EVENTARC_CLOUD_EVENT_SOURCE":"projects/chat-app-kaua/locations/us-central1/services/sendEmail","FUNCTION_TARGET":"sendEmail","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"163085396885-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"a72d1ab0ca0dd5d1e24460353a9394ff393e9a6b"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2024-11-18T02:00:31.893Z] [create-default-us-central1-sendEmail] Retrying task index 0
+[debug] [2024-11-18T02:00:31.894Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:31.894Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:31.894Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/chat-app-kaua/locations/us-central1/operations/operation-1731895223201-6272647912dc6-2af47905-a32e682b [none]
+[debug] [2024-11-18T02:00:33.061Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/chat-app-kaua/locations/us-central1/operations/operation-1731895223201-6272647912dc6-2af47905-a32e682b 200
+[debug] [2024-11-18T02:00:33.061Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/chat-app-kaua/locations/us-central1/operations/operation-1731895223201-6272647912dc6-2af47905-a32e682b {"name":"projects/chat-app-kaua/locations/us-central1/operations/operation-1731895223201-6272647912dc6-2af47905-a32e682b","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-18T02:00:24.503590641Z","target":"projects/chat-app-kaua/locations/us-central1/functions/sendEmail","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/chat-app-kaua/locations/us-central1/functions/sendEmail","buildConfig":{"runtime":"nodejs18","entryPoint":"sendEmail","source":{"storageSource":{"bucket":"gcf-v2-sources-163085396885-us-central1","object":"sendEmail/function-source.zip","generation":"1731895224235397"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/chat-app-kaua/serviceAccounts/163085396885-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/chat-app-kaua/locations/us-central1/services/sendemail","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"chat-app-kaua\",\"storageBucket\":\"chat-app-kaua.firebasestorage.app\"}","GCLOUD_PROJECT":"chat-app-kaua","EVENTARC_CLOUD_EVENT_SOURCE":"projects/chat-app-kaua/locations/us-central1/services/sendEmail","FUNCTION_TARGET":"sendEmail","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"163085396885-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"a72d1ab0ca0dd5d1e24460353a9394ff393e9a6b"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2024-11-18T02:00:37.064Z] [create-default-us-central1-sendEmail] Retrying task index 0
+[debug] [2024-11-18T02:00:37.064Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:37.064Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:37.064Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/chat-app-kaua/locations/us-central1/operations/operation-1731895223201-6272647912dc6-2af47905-a32e682b [none]
+[debug] [2024-11-18T02:00:38.340Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/chat-app-kaua/locations/us-central1/operations/operation-1731895223201-6272647912dc6-2af47905-a32e682b 200
+[debug] [2024-11-18T02:00:38.340Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/chat-app-kaua/locations/us-central1/operations/operation-1731895223201-6272647912dc6-2af47905-a32e682b {"name":"projects/chat-app-kaua/locations/us-central1/operations/operation-1731895223201-6272647912dc6-2af47905-a32e682b","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-18T02:00:24.503590641Z","target":"projects/chat-app-kaua/locations/us-central1/functions/sendEmail","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/chat-app-kaua/locations/us-central1/functions/sendEmail","buildConfig":{"runtime":"nodejs18","entryPoint":"sendEmail","source":{"storageSource":{"bucket":"gcf-v2-sources-163085396885-us-central1","object":"sendEmail/function-source.zip","generation":"1731895224235397"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/chat-app-kaua/serviceAccounts/163085396885-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/chat-app-kaua/locations/us-central1/services/sendemail","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"chat-app-kaua\",\"storageBucket\":\"chat-app-kaua.firebasestorage.app\"}","GCLOUD_PROJECT":"chat-app-kaua","EVENTARC_CLOUD_EVENT_SOURCE":"projects/chat-app-kaua/locations/us-central1/services/sendEmail","FUNCTION_TARGET":"sendEmail","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"163085396885-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"a72d1ab0ca0dd5d1e24460353a9394ff393e9a6b"},"environment":"GEN_2"},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/163085396885/locations/us-central1/builds/0951adb4-b598-4b61-b9f6-cdd430a2bb6a","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/0951adb4-b598-4b61-b9f6-cdd430a2bb6a?project=163085396885"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION","buildName":"projects/163085396885/locations/us-central1/builds/0951adb4-b598-4b61-b9f6-cdd430a2bb6a"},"done":false}
+[debug] [2024-11-18T02:00:46.345Z] [create-default-us-central1-sendEmail] Retrying task index 0
+[debug] [2024-11-18T02:00:46.346Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:46.346Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:46.346Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/chat-app-kaua/locations/us-central1/operations/operation-1731895223201-6272647912dc6-2af47905-a32e682b [none]
+[debug] [2024-11-18T02:00:47.496Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/chat-app-kaua/locations/us-central1/operations/operation-1731895223201-6272647912dc6-2af47905-a32e682b 200
+[debug] [2024-11-18T02:00:47.496Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/chat-app-kaua/locations/us-central1/operations/operation-1731895223201-6272647912dc6-2af47905-a32e682b {"name":"projects/chat-app-kaua/locations/us-central1/operations/operation-1731895223201-6272647912dc6-2af47905-a32e682b","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-18T02:00:24.503590641Z","endTime":"2024-11-18T02:00:46.097590055Z","target":"projects/chat-app-kaua/locations/us-central1/functions/sendEmail","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/chat-app-kaua/locations/us-central1/functions/sendEmail","buildConfig":{"runtime":"nodejs18","entryPoint":"sendEmail","source":{"storageSource":{"bucket":"gcf-v2-sources-163085396885-us-central1","object":"sendEmail/function-source.zip","generation":"1731895224235397"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/chat-app-kaua/serviceAccounts/163085396885-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/chat-app-kaua/locations/us-central1/services/sendemail","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"chat-app-kaua\",\"storageBucket\":\"chat-app-kaua.firebasestorage.app\"}","GCLOUD_PROJECT":"chat-app-kaua","EVENTARC_CLOUD_EVENT_SOURCE":"projects/chat-app-kaua/locations/us-central1/services/sendEmail","FUNCTION_TARGET":"sendEmail","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"163085396885-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"a72d1ab0ca0dd5d1e24460353a9394ff393e9a6b"},"environment":"GEN_2"},"stages":[{"name":"ARTIFACT_REGISTRY","message":"Deleting function artifacts in Artifact Registry","state":"COMPLETE"},{"name":"SERVICE","message":"Deleting Cloud Run service","state":"COMPLETE","resource":"projects/chat-app-kaua/locations/us-central1/services/sendemail"}],"operationType":"CREATE_FUNCTION"},"done":true,"error":{"code":13,"message":"Build failed with status: INTERNAL_ERROR and message: An unexpected error occurred. Refer to build logs: https://console.cloud.google.com/cloud-build/builds;region=us-central1/0951adb4-b598-4b61-b9f6-cdd430a2bb6a?project=163085396885. For more details see the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/0951adb4-b598-4b61-b9f6-cdd430a2bb6a?project=163085396885."}}
+[debug] [2024-11-18T02:00:47.496Z] Got source token undefined for region us-central1
+[error] Build failed with status: INTERNAL_ERROR and message: An unexpected error occurred. Refer to build logs: https://console.cloud.google.com/cloud-build/builds;region=us-central1/0951adb4-b598-4b61-b9f6-cdd430a2bb6a?project=163085396885. For more details see the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/0951adb4-b598-4b61-b9f6-cdd430a2bb6a?project=163085396885.
+[debug] [2024-11-18T02:00:47.501Z] Total Function Deployment time: 25306
+[debug] [2024-11-18T02:00:47.501Z] 1 Functions Deployed
+[debug] [2024-11-18T02:00:47.501Z] 1 Functions Errored
+[debug] [2024-11-18T02:00:47.501Z] 0 Function Deployments Aborted
+[debug] [2024-11-18T02:00:47.502Z] Average Function Deployment time: 25306
+[info] 
+[info] Functions deploy had errors with the following functions:
+	sendEmail(us-central1)
+[info] i  functions: cleaning up build files... 
+[debug] [2024-11-18T02:00:47.785Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:47.785Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:47.786Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:47.786Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:47.786Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/chat-app-kaua/locations/us-central1/repositories/gcf-artifacts/packages/send_email [none]
+[debug] [2024-11-18T02:00:47.787Z] >>> [apiv2][query] GET https://us.gcr.io/v2/chat-app-kaua/gcf/us-central1/tags/list [none]
+[debug] [2024-11-18T02:00:49.147Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/chat-app-kaua/locations/us-central1/repositories/gcf-artifacts/packages/send_email 404
+[debug] [2024-11-18T02:00:49.147Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/chat-app-kaua/locations/us-central1/repositories/gcf-artifacts/packages/send_email {"error":{"code":404,"message":"Package \"projects/chat-app-kaua/locations/us-central1/repositories/gcf-artifacts/packages/send_email\" was not found.","status":"NOT_FOUND"}}
+[debug] [2024-11-18T02:00:49.811Z] <<< [apiv2][status] GET https://us.gcr.io/v2/chat-app-kaua/gcf/us-central1/tags/list 404
+[debug] [2024-11-18T02:00:49.811Z] <<< [apiv2][body] GET https://us.gcr.io/v2/chat-app-kaua/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-11-18T02:00:49.812Z] Failed docker command with error  Request to https://us.gcr.io/v2/chat-app-kaua/gcf/us-central1/tags/list had HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"Request to https://us.gcr.io/v2/chat-app-kaua/gcf/us-central1/tags/list had HTTP Error: 404, Not Found","status":404}
+[debug] [2024-11-18T02:00:49.824Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:49.824Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:49.824Z] >>> [apiv2][query] GET https://us.gcr.io/v2/chat-app-kaua/gcf/us-central1/tags/list [none]
+[debug] [2024-11-18T02:00:51.083Z] <<< [apiv2][status] GET https://us.gcr.io/v2/chat-app-kaua/gcf/us-central1/tags/list 404
+[debug] [2024-11-18T02:00:51.083Z] <<< [apiv2][body] GET https://us.gcr.io/v2/chat-app-kaua/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-11-18T02:00:51.083Z] Failed docker command with error  Request to https://us.gcr.io/v2/chat-app-kaua/gcf/us-central1/tags/list had HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"Request to https://us.gcr.io/v2/chat-app-kaua/gcf/us-central1/tags/list had HTTP Error: 404, Not Found","status":404}
+[debug] [2024-11-18T02:00:51.192Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:51.193Z] Checked if tokens are valid: true, expires at: 1731897935405
+[debug] [2024-11-18T02:00:51.193Z] >>> [apiv2][query] GET https://us.gcr.io/v2/chat-app-kaua/gcf/us-central1/tags/list [none]
+[debug] [2024-11-18T02:00:52.454Z] <<< [apiv2][status] GET https://us.gcr.io/v2/chat-app-kaua/gcf/us-central1/tags/list 404
+[debug] [2024-11-18T02:00:52.454Z] <<< [apiv2][body] GET https://us.gcr.io/v2/chat-app-kaua/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-11-18T02:00:52.454Z] Failed docker command with error  Request to https://us.gcr.io/v2/chat-app-kaua/gcf/us-central1/tags/list had HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"Request to https://us.gcr.io/v2/chat-app-kaua/gcf/us-central1/tags/list had HTTP Error: 404, Not Found","status":404}
+[warn] !  functions: Unhandled error cleaning up build images. This could result in a small monthly bill if not corrected. You can attempt to delete these images by redeploying or you can delete them manually at https://console.cloud.google.com/gcr/images/chat-app-kaua/us/gcf 
+[debug] [2024-11-18T02:00:52.455Z] Functions deploy failed.
+[debug] [2024-11-18T02:00:52.455Z] {
+  "endpoint": {
+    "id": "sendEmail",
+    "project": "chat-app-kaua",
+    "region": "us-central1",
+    "entryPoint": "sendEmail",
+    "platform": "gcfv2",
+    "runtime": "nodejs18",
+    "callableTrigger": {},
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "serviceAccount": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "concurrency": 80,
+    "vpc": null,
+    "environmentVariables": {
+      "FIREBASE_CONFIG": "{\"projectId\":\"chat-app-kaua\",\"storageBucket\":\"chat-app-kaua.firebasestorage.app\"}",
+      "GCLOUD_PROJECT": "chat-app-kaua",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/chat-app-kaua/locations/us-central1/services/sendEmail"
+    },
+    "codebase": "default",
+    "cpu": 1,
+    "targetedByOnly": false,
+    "hash": "a72d1ab0ca0dd5d1e24460353a9394ff393e9a6b"
+  },
+  "op": "create",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "exit": 1,
+    "message": "Build failed with status: INTERNAL_ERROR and message: An unexpected error occurred. Refer to build logs: https://console.cloud.google.com/cloud-build/builds;region=us-central1/0951adb4-b598-4b61-b9f6-cdd430a2bb6a?project=163085396885. For more details see the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/0951adb4-b598-4b61-b9f6-cdd430a2bb6a?project=163085396885.",
+    "original": {
+      "code": 13,
+      "message": "Build failed with status: INTERNAL_ERROR and message: An unexpected error occurred. Refer to build logs: https://console.cloud.google.com/cloud-build/builds;region=us-central1/0951adb4-b598-4b61-b9f6-cdd430a2bb6a?project=163085396885. For more details see the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/0951adb4-b598-4b61-b9f6-cdd430a2bb6a?project=163085396885."
+    },
+    "status": 13,
+    "code": 13
+  }
+}
+[debug] [2024-11-18T02:00:52.727Z] Error: Failed to create function sendEmail in region us-central1
+    at C:\Users\PROFNTI\AppData\Roaming\nvm\v18.17.1\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:294:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Fabricator.createV2Function (C:\Users\PROFNTI\AppData\Roaming\nvm\v18.17.1\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:278:30)
+    at async Fabricator.createEndpoint (C:\Users\PROFNTI\AppData\Roaming\nvm\v18.17.1\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:137:13)
+    at async handle (C:\Users\PROFNTI\AppData\Roaming\nvm\v18.17.1\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:89:17)
+[error] 
+[error] Error: There was an error deploying functions
